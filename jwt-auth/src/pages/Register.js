@@ -19,83 +19,35 @@ const Register = ({ setLogoutUser }) => {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [error, setError] = useState("");
   let history = useHistory();
 
   let dispatch = useDispatch();
-  const {user, error} = useSelector(state => state.auth);
+  const { user, error } = useSelector(state => state.auth);
 
 
   useEffect(() => {
     dispatch(setErrorEmpty());
-  if(user) {
-    history.push("/");
-  }
+    if (user) {
+      history.push("/");
+    }
   }, [user])
 
   const register = (e) => {
     e.preventDefault();
-    dispatch(registerInitiate(email, password))
-    // axiox
-    //   .post("http://localhost:5000/api/auth/register", {
-    //     email,
-    //     password,
-    //   })
-    //   .then((response) => {
-    //     console.log("response", response);
-    //     localStorage.setItem(
-    //       "login",
-    //       JSON.stringify({
-    //         userLogin: true,
-    //         token: response.data.access_token,
-    //       })
-    //     );
-    //     setError("");
-    //     setEmail("");
-    //     setPassword("");
-    //     setLogoutUser(false);
-    //     history.push("/");
-    //   })
-    //   .catch((error) => setError(error.response.data.message));
+    dispatch(registerInitiate(email, password));
   };
   return (
     <div style={{ marginTop: "100px" }}>
       <h2>Register Page</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <form
-        className={classes.root}
-        noValidate
-        autoComplete="off"
-        onSubmit={register}
-      >
-        <TextField
-          id="username"
-          label="Username"
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <form className={classes.root} noValidate autoComplete="off" onSubmit={register}>
+        <TextField id="username" label="Username" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <br />
-        <TextField
-          id="password"
-          label="Password"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <TextField id="password" label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <br />
-        <Button
-          style={{ width: "100px" }}
-          variant="contained"
-          color="primary"
-          type="submit"
-        >
-          Register
-        </Button>
+        <Button style={{ width: "100px" }} variant="contained" color="primary" type="submit">Register</Button>
       </form>
-      <p>
-        Already have an account then please <Link to="/login">Login</Link>
-      </p>
+      <p>Already have an account then please <Link to="/login">Login</Link></p>
     </div>
   );
 };

@@ -5,12 +5,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { logoutInitiate } from "../redux/actions";
 
 const Header = ({ logoutUser, setLogoutUser }) => {
-  const { user } = useSelector(state => state.auth);
-
-
+  const { user } = useSelector((state) => state.auth);
 
   let dispatch = useDispatch();
-
 
   const logout = () => {
     dispatch(logoutInitiate());
@@ -20,26 +17,9 @@ const Header = ({ logoutUser, setLogoutUser }) => {
     <div>
       <header style={{ marginTop: "20px" }}>
         {user ? (
-          <Button
-            className='btn'
-            style={{ width: "100px" }}
-            variant="contained"
-            color="secondary"
-            onClick={logout}
-          >
-            Logout
-          </Button>
+          <Button className="btn" style={{ width: "100px" }} variant="contained" color="secondary" onClick={logout}>Logout</Button>
         ) : (
-          <Link to="/login">
-            <Button
-              style={{ width: "100px" }}
-              variant="contained"
-              color="secondary"
-              className="font-weight-bold"
-            >
-              Login
-            </Button>
-          </Link>
+          <Link to="/login"><Button style={{ width: "100px" }} variant="contained" color="secondary" className="font-weight-bold">Login</Button></Link>
         )}
       </header>
     </div>
