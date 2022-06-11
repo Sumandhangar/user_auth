@@ -5,34 +5,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { logoutInitiate } from "../redux/actions";
 
 const Header = ({ logoutUser, setLogoutUser }) => {
-  // const [login, setLogin] = useState("");
   const { user } = useSelector(state => state.auth);
 
 
-  // useEffect(() => {
-  //   hydrateStateWithLocalStorage();
-  // }, [logoutUser]);
 
   let dispatch = useDispatch();
 
 
   const logout = () => {
-    // localStorage.removeItem("login");
-    // setLogoutUser(true);
     dispatch(logoutInitiate());
   };
 
-  // const hydrateStateWithLocalStorage = () => {
-  //   if (localStorage.hasOwnProperty("login")) {
-  //     let value = localStorage.getItem("login");
-  //     try {
-  //       value = JSON.parse(value);
-  //       setLogin(value);
-  //     } catch (e) {
-  //       setLogin("");
-  //     }
-  //   }
-  // };
   return (
     <div>
       <header style={{ marginTop: "20px" }}>

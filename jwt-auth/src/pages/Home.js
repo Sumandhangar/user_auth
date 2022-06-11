@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  // const isLoginTrue = JSON.parse(localStorage.getItem("login"));
   const { user } = useSelector(state => state.auth);
 
 
