@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h2>JWT Authentication using JSON fake server</h2>
+        <h2>JWT Authentication using JSON fake server suman</h2>
         <Switch>
           <Route exact path="/">
             <Header logoutUser={logoutUser} setLogoutUser={setLogoutUser} />
