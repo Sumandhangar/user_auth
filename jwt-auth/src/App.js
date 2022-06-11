@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
+import './css/navbar.css'
+import './css/products.css'
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Header from "./pages/Header";
 import Register from "./pages/Register";
+import Navbar from "./pages/Navbar";
 
 function App() {
   const [logoutUser, setLogoutUser] = useState(false);
   return (
+    <>
+    <div className="">
     <BrowserRouter>
-      <div className="App">
-        <h2>JWT Authentication using JSON fake server</h2>
         <Switch>
           <Route exact path="/">
             <Header logoutUser={logoutUser} setLogoutUser={setLogoutUser} />
@@ -24,8 +27,9 @@ function App() {
             <Register setLogoutUser={setLogoutUser} />
           </Route>
         </Switch>
-      </div>
     </BrowserRouter>
+    </div>
+    </>
   );
 }
 
