@@ -9,11 +9,6 @@
       "id": 3,
       "email": "hashi@gmail.com",
       "password": "hashi"
-    },
-    {
-      "id": 4,
-      "email": "lucky@gmail.com",
-      "password": "lucky"
     }
   ]
 }
