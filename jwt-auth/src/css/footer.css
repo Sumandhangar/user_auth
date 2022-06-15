@@ -1,0 +1,19 @@
+
+.footer ul {
+    list-style-type: none;
+}
+.footer ul p{
+    white-space: nowrap;
+    margin: 6px 0 14px 0;
+}
+.footer ul li{
+    margin:  0 0 10px;
+}
+.footer ul li a{
+    font-size: 14px;
+    color: #DDD;
+    text-transform: capitalize;
+}
+.footer ul li a:hover{
+    text-decoration: underline;
+}
