@@ -10,6 +10,7 @@ import Header from "./pages/Header";
 import Register from "./pages/Register";
 import Computers from "./pages/Computers";
 import Layout from "./pages/Layout";
+import Footer from './pages/Footer'
 
 function App() {
   const [logoutUser, setLogoutUser] = useState(false);
@@ -21,7 +22,8 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Header logoutUser={logoutUser} setLogoutUser={setLogoutUser} />
-            <Home logoutUser={logoutUser} />
+            <Layout logoutUser={logoutUser} />
+            <Footer/>
           </Route>
           <Route path="/login">
             <Login setLogoutUser={setLogoutUser} />
@@ -30,6 +32,7 @@ function App() {
             <Register setLogoutUser={setLogoutUser} />
           </Route>
         </Switch>
+       
     </BrowserRouter>
     </div>
     </>

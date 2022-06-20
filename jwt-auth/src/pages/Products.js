@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Img1 from '../images/img1.jpg'
-import Img2 from '../images/img2.jpg'
-import Img3 from '../images/img3.jpg'
-import Img4 from '../images/img4.jpg'
 
 const Products = () => {
     return (
@@ -27,7 +24,7 @@ const Products = () => {
                         <div className=''><Link to='/'>Shop Now</Link></div>
                     </div>
                 </div>
-                <div className='col-lg-3 col-md-6 mt-lg-t mt-md-3 mt-3'>
+                <div className='col-lg-3 col-md-6 mt-lg-0 mt-md-3 mt-3'>
                     <div className='box p-3 bg-white'>
                         <h5 className='font-weight-bold'>Shop Father's Day Gifts</h5>
                         <Link to='/'> <div className='img' style={{ height: '275px' }}>
@@ -36,7 +33,7 @@ const Products = () => {
                         <div className=''><Link to='/'>Shop Now</Link></div>
                     </div>
                 </div>
-                <div className='col-lg-3 col-md-6 mt-lg-t mt-md-3 mt-3'>
+                <div className='col-lg-3 col-md-6 mt-lg-0 mt-md-3 mt-3'>
                     <div className='box p-3 bg-white'>
                         <h5 className='font-weight-bold'>Shop Father's Day Gifts</h5>
                         <Link to='/'><div className='img' style={{ height: '275px' }}>

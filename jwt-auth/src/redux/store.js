@@ -2,7 +2,6 @@ import { createStore, applyMiddleware } from 'redux'
 // import { composeWithDevTools } from "redux-devtools-extension";
 import {persistStore} from 'redux-persist'
 import logger from 'redux-logger'
-import reduxThunk from 'redux-thunk'
 import rootReducer from './root-reducer'
 import thunk from 'redux-thunk'
 

@@ -1,14 +1,1 @@
-{
-  "users": [
-    {
-      "id": 2,
-      "email": "suman@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": 3,
-      "email": "hashi@gmail.com",
-      "password": "hashi"
-    }
-  ]
-}
+{"users":[{"id":2,"email":"suman@gmail.com","password":"123456"},{"id":3,"email":"hashi@gmail.com","password":"hashi"},{"id":4,"email":"hema@gmail.com","password":"123456"},{"id":5,"email":"radha@gmail.com","password":"123456"},{"id":6,"email":"vandna@gmail.com","password":"123456"}]}

@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { useHistory, Link } from "react-router-dom";
-import axiox from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { loginInitiate, setErrorEmpty } from "../redux/actions";
 
@@ -38,6 +37,11 @@ const Login = ({ setLogoutUser }) => {
     dispatch(loginInitiate(email, password));
   };
   return (
+    <>
+    <div className="container mt-4">
+      <div className="row">
+        <div className="col-md-12 text-center">
+    <Link to='/'><button className="btn btn-primary">Back to Home</button></Link>
     <div style={{ marginTop: "100px" }}>
       <h2>Login Page</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
@@ -50,6 +54,10 @@ const Login = ({ setLogoutUser }) => {
       </form>
       <p>Don't have an account then please do<Link to="/register">Register</Link> yourself</p>
     </div>
+    </div>
+      </div>
+    </div>
+    </>
   );
 };
 
