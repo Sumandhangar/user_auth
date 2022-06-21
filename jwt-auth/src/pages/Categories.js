@@ -19,7 +19,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Headphone} className='w-110' />
+                                                <img src={Headphone} className='w-110' alt='category'/>
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Headsets</p>
                                         </Link>
@@ -27,7 +27,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Keyboard} className='w-120' />
+                                                <img src={Keyboard} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Keyboard</p>
                                         </Link>
@@ -37,7 +37,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Mouse} className='w-120' />
+                                                <img src={Mouse} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Mouse</p>
                                         </Link>
@@ -45,7 +45,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Chair} className='w-120' />
+                                                <img src={Chair} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Chair</p>
                                         </Link>
@@ -62,7 +62,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Headphone} className='w-110' />
+                                                <img src={Headphone} className='w-110'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Headsets</p>
                                         </Link>
@@ -70,7 +70,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Keyboard} className='w-120' />
+                                                <img src={Keyboard} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Keyboard</p>
                                         </Link>
@@ -80,7 +80,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Mouse} className='w-120' />
+                                                <img src={Mouse} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Mouse</p>
                                         </Link>
@@ -88,7 +88,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Chair} className='w-120' />
+                                                <img src={Chair} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Chair</p>
                                         </Link>
@@ -105,7 +105,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Headphone} className='w-110' />
+                                                <img src={Headphone} className='w-110'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Headsets</p>
                                         </Link>
@@ -113,7 +113,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Keyboard} className='w-120' />
+                                                <img src={Keyboard} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Keyboard</p>
                                         </Link>
@@ -123,7 +123,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Mouse} className='w-120' />
+                                                <img src={Mouse} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Mouse</p>
                                         </Link>
@@ -131,7 +131,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Chair} className='w-120' />
+                                                <img src={Chair} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Chair</p>
                                         </Link>
@@ -148,7 +148,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Headphone} className='w-110' />
+                                                <img src={Headphone} className='w-110'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Headsets</p>
                                         </Link>
@@ -156,7 +156,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Keyboard} className='w-120' />
+                                                <img src={Keyboard} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Keyboard</p>
                                         </Link>
@@ -166,7 +166,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Mouse} className='w-120' />
+                                                <img src={Mouse} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Mouse</p>
                                         </Link>
@@ -174,7 +174,7 @@ export const Categories = () => {
                                     <div className='col-6 category-home'>
                                         <Link to='/'>
                                             <div className='img'>
-                                                <img src={Chair} className='w-120' />
+                                                <img src={Chair} className='w-120'alt='category' />
                                             </div>
                                             <p className='p-0 text-dark' style={{ fontSize: '12px' }}>Chair</p>
                                         </Link>

@@ -1,6 +1,9 @@
 a:hover {
   text-decoration: none;
 }
+select option{
+  width: fit-content;
+}
 button:focus {
   outline: none;
 }
@@ -56,7 +59,20 @@ input:focus {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
-
+.hover-border{
+  border: 1px solid #131921;
+}
+.hover-border:hover{
+  border: 1px solid white;
+}
+.nav-link{
+  font-size: 14px;
+  border: 1px solid #232f3e;
+  border-radius: 1px;
+}
+.nav-link:hover{
+  border: 1px solid white;
+}
 /* ---------------------------------------------------------- */
 
 .dropbtn {

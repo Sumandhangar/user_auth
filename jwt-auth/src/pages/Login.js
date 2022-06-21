@@ -28,6 +28,7 @@ const Login = ({ setLogoutUser }) => {
     dispatch(setErrorEmpty());
     if (user) {
       history.push("/");
+      console.log(user.email, "jsdhnsjfhsj");
     }
   }, [user])
 
