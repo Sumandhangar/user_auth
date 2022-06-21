@@ -139,15 +139,13 @@ input:focus {
   right: 0;
 }
 
-
-
 /* ---------------------------------------------------------------- */
 
 .button_container {
   /* position: fixed;
   
   right: 5%; */
- /*  width: 25px; */
+  /*  width: 25px; */
   cursor: pointer;
   /* top: -5%; */
   z-index: 100;
@@ -170,7 +168,7 @@ input:focus {
   color: black;
   font-size: 30px;
   font-weight: 500;
-  transition: .5s linear;
+  transition: 0.5s linear;
 }
 
 /*****************************************************/
@@ -189,51 +187,29 @@ input:focus {
 }
 
 .overlay:before {
-  content: '';
+  content: "";
   background: black;
-  opacity: .7;
+  opacity: 0.7;
   left: -100%;
   top: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-  transition: left .2s linear;
+  transition: left 0.2s linear;
 }
 
-.overlay-menu{
-  position: fixed;
+.overlay-menu {
+  content: "";
+  background: lightblue;
+  opacity: 0;
+  /* left: -100%; */
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: red; */
-  /* opacity: 1; */
-  /* visibility: hidden; */
-  transition: opacity 1s, visibility 1s, width 1s;
-  z-index: 40;
-}
-.overlay-menu:before{
-  content: '';
-  background: red;
-  opacity: .7;
-  left: -100%;
-  top: 0;
-  width: 100%;
+  width: 30%;
   height: 100%;
   position: absolute;
-  transition: left .2s linear;
+  transition: left 0.2s linear;
+  z-index: 100;
 }
-/* .overlay:after {
-  content: '';
-  background: black;
-  opacity: .7;
-  right: -55%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: all 1s linear;
-} */
 
 /* .overlay.open {
   visibility: visible;
@@ -243,17 +219,20 @@ input:focus {
 .overlay.open:before {
   left: 0;
 }
-.overlay-menu.open:before {
+.overlay.open:after {
   left: 0;
 }
-
 /* .overlay.open:after {
   right: 0;
 } */
 
- .overlay.open li {
-  animation: fadeInRight 1s ease forwards;
+.overlay.open li {
+  /* animation: fadeInRight 1s ease forwards; */
   /* animation-delay: 1s; */
+  opacity: 9;
+}
+.overlay.open .overlay-menu {
+  opacity: 9;
 }
 
 /*.overlay.open li:nth-of-type(2) {
@@ -285,8 +264,9 @@ input:focus {
   margin: 0 auto;
   display: inline-block;
   position: relative;
-  /* height: 100%; */
-  padding: 0 auto 0 .5rem;
+  height: 100%;
+  margin: 7rem 0 0 0;
+  z-index: 100;
 }
 
 .overlay ul li {
@@ -297,47 +277,67 @@ input:focus {
   /* height: 50px; */
 }
 
-
 .overlay ul li a {
   display: block;
-  position: relative;
-  color: #fff;
+  /* position: relative; */
+  color: black;
   text-decoration: none;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
-.overlay ul li a:hover:after,
-.overlay ul li a:focus:after,
-.overlay ul li a:active:after {
-  width: 100%;
+.button-icon {
+  border: none;
+}
+.button-icon .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
 }
 
-.overlay ul li a:after {
-  content: '';
+.button-icon .navbar-toggler-icon:after {
+  width: 24px;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 1px;
-  background: white;
-  transition: 1s;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+
+.button-icon .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 8px;
+  left: 0;
+  content: "";
+  z-index: 2;
+  transition: all 300ms linear;
 }
 
 
-@keyframes fadeInRight {
-  0% {
-      opacity: 0;
-      left: 30%;
-  }
-  100% {
-      opacity: 1;
-      left: 0;
-  }
+.button-icon[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  margin-top: 1rem;
+  position: fixed;
+  left: 32%;
 }
-@media screen and (max-width:767px) {
-  .button_container {
-     right: 10%;
-  }
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  position: fixed;
+  left: 32%;
 }
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+
