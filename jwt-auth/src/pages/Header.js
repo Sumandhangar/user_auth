@@ -9,6 +9,7 @@ import Flag from '../images/india.jpg'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BiSearch } from 'react-icons/bi'
+import {MdMenu} from 'react-icons/md'
 
 const Header = ({ logoutUser, setLogoutUser }) => {
   const { user } = useSelector((state) => state.auth);
@@ -19,6 +20,10 @@ const Header = ({ logoutUser, setLogoutUser }) => {
     dispatch(logoutInitiate());
   };
 
+  const [state, setState] = useState("");
+  const toggleAccordion = () => {
+    setState(state === "" ? "open" : "");
+  }
   return (
     <>
 
@@ -168,15 +173,22 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </ul>
         </div>
       </nav>
-      <nav className="navbar navbar-expand-xl" style={{ background: '#232f3e' }}>
-         <ul className="navbar-nav">
-         <li className="nav-link"><Link to='/' className="nav-item">Today's Deals</Link></li>
-          <li className="nav-link"><Link to='/' className="nav-item">Customer Service</Link></li>
-          <li className="nav-link"><Link to='/' className="nav-item">Registry</Link></li>
-          <li className="nav-link"><Link to='/' className="nav-item">Gift Cards</Link></li>
-          <li className="nav-link"><Link to='/' className="nav-item">Sell</Link></li>
-         </ul>
-      </nav>
+      <nav className="navbar m-0 p-0" style={{ zIndex:'100', background:'#232f3e'}}>
+                <div className="button_container" id="toggle">
+                    <button className="button-icon" onClick={toggleAccordion} ><span style={{color:'white'}} className='d-flex'><MdMenu/></span></button>
+                </div>
+
+                <div className={`overlay ${state}`} id="overlay">
+                    <nav className="overlay-menu">
+                        <ul>
+                            <li><a href="#"onClick={toggleAccordion}>Home</a></li>
+                            <li><a href="#"onClick={toggleAccordion}>About</a></li>
+                            <li><a href="#"onClick={toggleAccordion}>Work</a></li>
+                            <li><a href="#"onClick={toggleAccordion}>Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                </nav>
 
       {/* {user ? (
           <Button className="btn" style={{ width: "100px" }} variant="contained" color="secondary" onClick={logout}>Logout</Button>
