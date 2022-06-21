@@ -167,10 +167,10 @@ const Header = ({ logoutUser, setLogoutUser }) => {
         </div>
       </div>
 
-      <div className="" id="collapsibleNavbar"></div>
-      {/* -------------------------------------------------------- */}
 
-       <nav className="navbar m-0 p-0" style={{ zIndex: '100', background: '#232f3e' }}>
+      {/* -------------------------------------------------------- */}
+      <div className="" id="collapsibleNavbar"></div>
+      <nav className="navbar m-0 p-0" style={{background: '#232f3e' }}>
         <div className="button_container pt-2 pb-2 pl-2 text-center" id="toggle">
           <button className="navbar-toggler button-icon" type="button" onClick={toggleAccordion} data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
             <span className="navbar-toggler-icon mb-1" style={{ backgroundImage: 'none' }}></span>
@@ -187,7 +187,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </ul>
         </div>
         <div className={`overlay ${state}`} id="overlay"> <nav className="overlay-menu">
-          <div className="p-3 bg-dark d-flex justifu-content-center align-items-center"><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
+          <div className="p-3 bg-dark d-flex justify-content-center align-items-center"><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
           <ul className="sidebar">
             <h5>Digital Content & Devices</h5>
             <li><a href="#" onClick={toggleAccordion}>Home</a></li>
@@ -197,7 +197,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </ul>
         </nav>
         </div>
-      </nav> 
+      </nav>
 
 
     </>
