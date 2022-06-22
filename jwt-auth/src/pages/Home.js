@@ -6,10 +6,10 @@ const Home = () => {
   const { user } = useSelector(state => state.auth);
 
 
-  const userNotLogin = () => 
+  const userNotLogin = () =>
   (
     <>
-       <Layout/>
+      <Layout />
     </>
   );
   return (

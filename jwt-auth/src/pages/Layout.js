@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
 
-      <div className='container-fluid' style={{zIndex:'-5'}}>
+      <div className='container-fluid' style={{ zIndex: '-5' }}>
         <div className='row'>
           <div className='col-md-12 m-0 p-0'>
             <div id="demo" className="carousel slide bg-white" data-ride="carousel">
@@ -35,7 +35,7 @@ const Layout = () => {
                 <GrFormNext color="black" fontSize="3em" />
               </Link>
             </div>
-            <Categories style={{zIndex:'5', marginTop:'-18rem'}}/>
+            <Categories style={{ zIndex: '5', marginTop: '-18rem' }} />
             <Products />
             <Slider />
           </div>

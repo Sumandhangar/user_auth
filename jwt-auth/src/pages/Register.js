@@ -41,14 +41,14 @@ const Register = ({ setLogoutUser }) => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-          <Link to='/'><button className="btn btn-primary mt-5">Back to Home</button></Link>
+            <Link to='/'><button className="btn btn-primary mt-5">Back to Home</button></Link>
             <div style={{ marginTop: "100px" }}>
               <h2>Register Page</h2>
               {error && <p style={{ color: "red" }}>{error}</p>}
               <form className={classes.root} noValidate autoComplete="off" onSubmit={register}>
-                <TextField id="username" label="Username" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                <TextField id="username" label="Username" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <br />
-                <TextField id="password" label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                <TextField id="password" label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 <br />
                 <Button style={{ width: "100px" }} variant="contained" color="primary" type="submit">Register</Button>
               </form>

@@ -10,7 +10,7 @@ const Products = () => {
                     <div className='box p-3 bg-white'>
                         <h5 className='font-weight-bold'>Shop Father's Day Gifts</h5>
                         <Link to='/'> <div className='img' style={{ height: '275px' }}>
-                            <img src={Img1} className='w-100 h-100' alt='product'/>
+                            <img src={Img1} className='w-100 h-100' alt='product' />
                         </div> </Link>
                         <div className=''><Link to='/'>Shop Now</Link></div>
                     </div>

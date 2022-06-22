@@ -13,7 +13,7 @@ const Slider = () => {
                     <div className='col-md-12'>
                         <div id="demo" className="carousel slide bg-white" data-ride="carousel">
                             <div className="carousel-inner p-3">
-                            <h3 className='m-0 p-0'>Frequently repurchased in Home</h3>
+                                <h3 className='m-0 p-0'>Frequently repurchased in Home</h3>
                                 <div className="carousel-item active">
                                     <div className='row'>
                                         <div className='col-md-3'>
@@ -88,7 +88,7 @@ const Slider = () => {
                                 </div>
                             </div>
                             <Link to='/' className="carousel-control-prev w-auto" href="#demo" data-slide="prev">
-                                <GrFormPrevious color="black" fontSize="3em"/>
+                                <GrFormPrevious color="black" fontSize="3em" />
                             </Link>
                             <Link to='/' className="carousel-control-next w-auto" href="#demo" data-slide="next">
                                 <GrFormNext color="black" fontSize="3em" />

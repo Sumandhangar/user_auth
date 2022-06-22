@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
@@ -37,7 +37,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
             </Link>
 
             <div className="search-button rounded bg-light d-flex justify-content-left" style={{ height: '42px' }}><div className="dropdown" style={{ borderRadius: '20px 0 0 20px', height: '100%', fontSize: '14px', color: 'gray' }}>
-               <select className="btn dropdown-toggle border-top-0 text-left border-bottom-0 border-left-0 border-right-1" data-toggle="dropdown" style={{ borderRadius: '0', border: '1px solid gray', height: '100%', fontSize: '12px', width:'fit-content' }}>
+              <select className="btn dropdown-toggle border-top-0 text-left border-bottom-0 border-left-0 border-right-1" data-toggle="dropdown" style={{ borderRadius: '0', border: '1px solid gray', height: '100%', fontSize: '12px', width: 'fit-content' }}>
                 <option>All</option>
                 <option>Art & Craft</option>
                 <option>Computers</option>
@@ -56,7 +56,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                 <option>Books</option>
               </select>
             </div>
-              <input type="text" className="bg-white border-0" style={{width:'420px'}} />
+              <input type="text" className="bg-white border-0" style={{ width: '420px' }} />
               <button type="submit" className="h-100  border-0 pl-2 pr-2" style={{ borderRadius: '0 4px 4px 0', width: '50px', background: 'rgb(237 182 55)' }}><BiSearch size="1.5em" /></button>
             </div>
 
@@ -103,7 +103,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                       <label htmlFor="htmlFor" className="text-dark pl-2">मराठी - MR - भाषांतर</label>
                     </div>
                     <div className="d-flex mb-2"><div className="" style={{ width: '20px' }}>
-                      <img src={Flag} className='w-100' alt='flag'/></div><span className="text-dark pl-2 pt-1" style={{ fontSize: '14px' }}>You are shopping on Nobaggy.in</span></div>
+                      <img src={Flag} className='w-100' alt='flag' /></div><span className="text-dark pl-2 pt-1" style={{ fontSize: '14px' }}>You are shopping on Nobaggy.in</span></div>
                     <Link to='/'><span className="text-primary">Change country/region</span></Link>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                   <button className="dropbtn dropdown-toggle" style={{ height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <small>Hello, Sign in<br /> <b>Account & Lists</b></small>
                   </button>
-                  <div className="dropdown-content rounded pl-2 pr-2" style={{ width: '450px', marginLeft:'-7rem' }}>
+                  <div className="dropdown-content rounded pl-2 pr-2" style={{ width: '450px', marginLeft: '-7rem' }}>
                     <div className="input-group d-flex justify-content-center align-items-center mt-3" style={{ flexDirection: 'column' }}>
                       {/* <button className="btn pl-5 pr-5 btn-warning border-0" style={{ background: 'rgb(237, 182, 55)' }}><small>Sign in</small></button> */}
                       {user ? (
@@ -181,7 +181,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
 
       {/* -------------------------------------------------------- */}
       <div className="" id="collapsibleNavbar"></div>
-      <nav className="navbar m-0 p-0" style={{background: '#232f3e' }}>
+      <nav className="navbar m-0 p-0" style={{ background: '#232f3e' }}>
         <div className="button_container pt-2 pb-2 pl-2 text-center" id="toggle">
           <button className="navbar-toggler button-icon" type="button" onClick={toggleAccordion} data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
             <span className="navbar-toggler-icon mb-1" style={{ backgroundImage: 'none' }}></span>
@@ -198,7 +198,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </ul>
         </div>
         <div className={`overlay ${state}`} id="overlay"> <nav className="overlay-menu">
-         <div className="p-3 bg-dark d-flex justify-content-left align-items-left"><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
+          <div className="p-3 bg-dark d-flex justify-content-left align-items-left"><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
           <ul className="sidebar">
             <h5>Digital Content & Devices</h5>
             <li><Link to="/" onClick={toggleAccordion}>Home</Link></li>
