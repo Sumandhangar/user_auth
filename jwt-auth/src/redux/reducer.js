@@ -1,13 +1,19 @@
 import * as types from './actionType'
 
 const initialState = {
-    user: null,
+    users: [],
+    user: {},
     loading: false,
     error: null,
 };
 
-const authReducer = (state = initialState, action) => {
+const authReducer = (state = {users: ["a", "b"] }, action) => {
     switch (action.type) {
+        case types.GET_USERS_START:
+            return {
+                loading: true,
+                users: [],
+            }
         case types.LOGIN_START:
         case types.REGISTER_START:
             return {
@@ -15,6 +21,7 @@ const authReducer = (state = initialState, action) => {
                 loading: true,
             };
         case types.LOGIN_SUCCESS:
+        case types.GET_USERS_SUCCESS:
         case types.REGISTER_SUCCESS:
             return {
                 ...state,
@@ -22,6 +29,7 @@ const authReducer = (state = initialState, action) => {
                 user: action.payload,
             };
         case types.LOGIN_FAIL:
+        case types.GET_USERS_FAIL:
         case types.REGISTER_FAIL:
             return {
                 ...state,

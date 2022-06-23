@@ -16,12 +16,12 @@ const loginFail = (error) => ({
     payload: error,
 });
 
- export const logoutInitiate = () => ({
-     type: types.LOGOUT_USER,
- })
+export const logoutInitiate = () => ({
+    type: types.LOGOUT_USER,
+})
 
 
- const registerStart = () => ({
+const registerStart = () => ({
     type: types.REGISTER_START,
 });
 
@@ -35,39 +35,39 @@ const registerFail = (error) => ({
     payload: error,
 });
 
-export const setErrorEmpty = () => ({
+ export const setErrorEmpty = () => ({
     type: types.SET_ERROR_EMPTY,
 })
 
-export const loginInitiate = (email,password) => {
-   return function (dispatch) {
-       dispatch(loginStart());
-       axios
-       .post("http://localhost:5000/api/auth/login", {
-           email,
-           password,
-       })
-       .then((response) => {
-           console.log("response", response);
-           dispatch(loginSuccess(response.data.access_token))
-        })
-       .catch((error) => dispatch(loginFail(error.response.data.message)));
-   };
+export const loginInitiate = (email, password) => {
+    return function (dispatch) {
+        dispatch(loginStart());
+        axios
+            .post("http://localhost:5000/api/auth/login", {
+                email,
+                password,
+            })
+            .then((response) => {
+                console.log("response", response);
+                dispatch(loginSuccess(response.data.access_token))
+            })
+            .catch((error) => dispatch(loginFail(error.response.data.message)));
+    };
 };
 
 
-export const registerInitiate = (email,password) => {
+export const registerInitiate = (email, password) => {
     return function (dispatch) {
         dispatch(registerStart());
         axios
-        .post("http://localhost:5000/api/auth/register", {
-            email,
-            password,
-        })
-        .then((response) => {
-            console.log("response", response);
-            dispatch(registerSuccess(response.data.access_token));
-         })
-        .catch((error) => dispatch(registerFail(error.response.data.message)));
+            .post("http://localhost:5000/api/auth/register", {
+                email,
+                password,
+            })
+            .then((response) => {
+                console.log("response", response);
+                dispatch(registerSuccess(response.data.access_token));
+            })
+            .catch((error) => dispatch(registerFail(error.response.data.message)));
     };
- };
+};
