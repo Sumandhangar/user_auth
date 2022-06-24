@@ -9,20 +9,26 @@ import Flag from '../images/india.jpg'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BiSearch } from 'react-icons/bi'
+import { BsGlobe } from 'react-icons/bs'
+import { GiUsaFlag } from 'react-icons/gi'
+import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown, MdKeyboardArrowRight } from 'react-icons/md'
 
 const Header = ({ logoutUser, setLogoutUser }) => {
   const { user } = useSelector((state) => state.auth);
-
+  const Red = () => <span>See Less <MdOutlineKeyboardArrowUp size='1.8em' className="text-secondary" /></span>;
+  const Blue = () => <span>See All<MdOutlineKeyboardArrowDown size='1.8em' className="text-secondary" /></span>;
+  const [isRed, setIsBlue] = useState(false);
   let dispatch = useDispatch();
-
   const logout = () => {
     dispatch(logoutInitiate());
   };
-
   const [state, setState] = useState("");
   const toggleAccordion = () => {
     setState(state === "" ? "open" : "");
   }
+
+ 
+
   return (
     <>
 
@@ -102,8 +108,10 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                       <input type="radio" id="html" name="fav_language" value="English" className="mt-1" />
                       <label htmlFor="htmlFor" className="text-dark pl-2">मराठी - MR - भाषांतर</label>
                     </div>
-                    <div className="d-flex mb-2"><div className="" style={{ width: '20px' }}>
-                      <img src={Flag} className='w-100' alt='flag' /></div><span className="text-dark pl-2 pt-1" style={{ fontSize: '14px' }}>You are shopping on Nobaggy.in</span></div>
+                    <div className="d-flex mb-2">
+                      <div className="" style={{ width: '20px' }}>
+                        <img src={Flag} className='w-100' alt='flag' /></div>
+                      <span className="text-dark pl-2 pt-1" style={{ fontSize: '14px' }}>You are shopping on Nobaggy.in</span></div>
                     <Link to='/'><span className="text-primary">Change country/region</span></Link>
                   </div>
                 </div>
@@ -197,16 +205,71 @@ const Header = ({ logoutUser, setLogoutUser }) => {
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Sell</Link></li>
           </ul>
         </div>
-        <div className={`overlay ${state}`} id="overlay"> <nav className="overlay-menu">
-          <div className="p-3 bg-dark d-flex justify-content-left align-items-left"><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
-          <ul className="sidebar">
-            <h5>Digital Content & Devices</h5>
-            <li><Link to="/" onClick={toggleAccordion}>Home</Link></li>
-            <li><Link to="/" onClick={toggleAccordion}>About</Link></li>
-            <li><Link to="/" onClick={toggleAccordion}>Work</Link></li>
-            <li><Link to="/" onClick={toggleAccordion}>Contact</Link></li>
-          </ul>
-        </nav>
+        <div className={`overlay ${state}`} id="overlay">
+          <nav className="overlay-menu">
+            <div className="p-3 d-flex justify-content-left align-items-left" style={{ background: '#232f3e' }}><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
+            <ul className="menu m-0 p-0 w-100">
+              <li className="pl-2 pt-2">
+                <h5 className="pl-4 pt-2">Digital Content & Devices</h5>
+                <ul className="submenu">
+                  <li><Link to="/music">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Kindle E-readers & Books<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Appstore for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                </ul>
+              </li>
+              <hr />
+              <li className="pl-2 pt-2">
+                <h5 className="pl-4">Shop By Department</h5>
+                <ul className="submenu">
+                  <li><Link to="/">Electronic<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Computers<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Smart Home<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Art & Craft<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  {isRed ?
+                    <>
+                      <li><Link to="/">Automotive<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Baby<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Beauti & Personal Care<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Women's Fashion<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Men's Fashion<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Girl's Fashion<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Boy's Fashion<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Health & Household<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Home & Kitchen<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Industrial & Scientific<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Luggage<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Movies & Television<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                      <li><Link to="/">Pet Supplies<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                    </> :
+                    <></>
+                  }
+                  <li type='button' onClick={() => setIsBlue(!isRed)}>{isRed ? <Red /> : <Blue />}</li>
+                </ul>
+              </li>
+              <hr />
+              <li className="pl-2 pt-2">
+                <h5 className="pl-4">Programs & Features</h5>
+                <ul className="submenu">
+                  <li><Link to="/">Gift Cards<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Fount It on Nobaggy<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Nobaggy Live<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">International Shopping<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                </ul>
+              </li>
+              <hr />
+              <li className="pl-2 pt-2">
+                <h5 className="pl-4">help & Settings</h5>
+                <ul className="submenu">
+                  <li><Link to="/">Your Account<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/"><BsGlobe size='1em' className="text-secondary mr-2" />English<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/"><GiUsaFlag size='1em' className="text-secondary mr-2" />United State<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Customer Service<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li><Link to="/">Sign Out<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
       </nav>
 

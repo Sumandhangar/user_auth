@@ -205,7 +205,9 @@ input:focus {
 
 .overlay-menu {
   content: "";
-  background: lightblue;
+  background: white;
+  height: 100%;
+  overflow-y: scroll;
   opacity: 0;
   top: 0;
   width: 30%;
@@ -233,32 +235,43 @@ input:focus {
 }
 
 
-.overlay ul {
+.overlay .menu {
   list-style: none;
   margin: 0 auto;
   display: inline-block;
   position: relative;
   height: 100%;
-  margin: 7rem 0 0 0;
   z-index: 100;
 }
-
-.overlay ul li {
+.submenu {
+  margin-left: -4rem;
+}
+.overlay .menu li {
   display: block;
   position: relative;
-  opacity: 0;
-
-  /* height: 50px; */
+  padding: .5rem 0 .5rem 3rem;
 }
-
-.overlay ul li a {
+ .submenu li a {
   display: block;
-  /* position: relative; */
   color: black;
   text-decoration: none;
   overflow: hidden;
-  font-size: 1.2rem;
+  font-size: 14px;
 }
+.submenu li a .arrow{
+  color: gray;
+ float: right;
+ margin-right: 1rem;
+ margin-top: -.2rem;
+}
+.submenu li:hover{
+  background-color: rgb(241, 241, 241);
+}
+.submenu li:hover a .arrow{
+  color: black;
+}
+
+
 
 .button-icon {
   border: none;
@@ -314,4 +327,9 @@ input:focus {
   border-color: transparent;
 }
 
-
+.trigger{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: lawngreen;
+}

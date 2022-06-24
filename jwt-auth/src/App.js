@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Footer from './pages/Footer'
+import Music from "./pages/Music";
 
 function App() {
   const [logoutUser, setLogoutUser] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/register">
             <Register setLogoutUser={setLogoutUser} />
           </Route>
+          <Route path="/music" element={<Music />} />
         </Switch>
        
     </BrowserRouter>
