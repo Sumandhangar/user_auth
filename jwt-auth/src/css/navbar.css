@@ -203,11 +203,10 @@ input:focus {
   transition: left 0.2s linear;
 }
 
-.overlay-menu {
+.overlay-menu{
   content: "";
   background: white;
   height: 100%;
-  overflow-y: scroll;
   opacity: 0;
   top: 0;
   width: 30%;
@@ -215,7 +214,9 @@ input:focus {
   position: absolute;
   transition: left 0.2s linear;
 }
-
+.overlay-menu .menu{
+  overflow-y: scroll;
+}
 
 .overlay.open:before {
   left: 0;
@@ -325,11 +326,4 @@ input:focus {
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
-}
-
-.trigger{
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  background-color: lawngreen;
 }

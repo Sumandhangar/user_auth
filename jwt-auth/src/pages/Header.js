@@ -27,7 +27,10 @@ const Header = ({ logoutUser, setLogoutUser }) => {
     setState(state === "" ? "open" : "");
   }
 
- 
+  const [open, setOpen] = useState("");
+  const slideAccordion = () => {
+    setOpen(open === "" ? "trigger" : "");
+  }
 
   return (
     <>
@@ -41,7 +44,6 @@ const Header = ({ logoutUser, setLogoutUser }) => {
             <Link to='/' className="text-white m-2">
               <div className="w-100 d-flex rounded p-1 hover-border" style={{ justifyCOntent: 'center', alignItems: 'center' }}> <HiOutlineLocationMarker color="white" size="1.5em" /><span className="pl-lg-1 m-0" style={{ lineHeight: '19px' }}>Deviver to <b>India</b></span></div>
             </Link>
-
             <div className="search-button rounded bg-light d-flex justify-content-left" style={{ height: '42px' }}><div className="dropdown" style={{ borderRadius: '20px 0 0 20px', height: '100%', fontSize: '14px', color: 'gray' }}>
               <select className="btn dropdown-toggle border-top-0 text-left border-bottom-0 border-left-0 border-right-1" data-toggle="dropdown" style={{ borderRadius: '0', border: '1px solid gray', height: '100%', fontSize: '12px', width: 'fit-content' }}>
                 <option>All</option>
