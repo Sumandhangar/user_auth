@@ -9,29 +9,29 @@ import Flag from '../images/india.jpg'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BiSearch } from 'react-icons/bi'
-import { BsGlobe } from 'react-icons/bs'
+import { BsGlobe, BsArrowLeft } from 'react-icons/bs'
 import { GiUsaFlag } from 'react-icons/gi'
 import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown, MdKeyboardArrowRight } from 'react-icons/md'
 
 const Header = ({ logoutUser, setLogoutUser }) => {
   const { user } = useSelector((state) => state.auth);
-  const Red = () => <span>See Less <MdOutlineKeyboardArrowUp size='1.8em' className="text-secondary" /></span>;
-  const Blue = () => <span>See All<MdOutlineKeyboardArrowDown size='1.8em' className="text-secondary" /></span>;
-  const [isRed, setIsBlue] = useState(false);
   let dispatch = useDispatch();
   const logout = () => {
     dispatch(logoutInitiate());
   };
+  const [showless, setShowAll] = useState(false);
+
   const [state, setState] = useState("");
   const toggleAccordion = () => {
     setState(state === "" ? "open" : "");
   }
+  const [style, setStyle] = useState("category-inner");
+  const toggleClass = () => {
+    setStyle("clicked-category-inner");
+  };
 
-  const [open, setOpen] = useState("");
-  const slideAccordion = () => {
-    setOpen(open === "" ? "trigger" : "");
-  }
 
+   
   return (
     <>
 
@@ -119,16 +119,14 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                 </div>
               </div>
             </Link>
-            {/* ******************************* */}
             <Link to='/' className="text-white m-2">
               <div className="w-100 d-flex rounded p-1 hover-border" style={{ justifyCOntent: 'center', alignItems: 'center' }}>
                 <div className=" dropdown">
                   <button className="dropbtn dropdown-toggle" style={{ height: '36px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <small>Hello, Sign in<br /> <b>Account & Lists</b></small>
                   </button>
-                  <div className="dropdown-content rounded pl-2 pr-2" style={{ width: '450px', marginLeft: '-7rem' }}>
+                  <div className="dropdown-content rounded pl-2 pr-2 mt-1" style={{ width: '450px', marginLeft: '-7rem' }}>
                     <div className="input-group d-flex justify-content-center align-items-center mt-3" style={{ flexDirection: 'column' }}>
-                      {/* <button className="btn pl-5 pr-5 btn-warning border-0" style={{ background: 'rgb(237, 182, 55)' }}><small>Sign in</small></button> */}
                       {user ? (
                         <Link to="/" className="pl-lg-4 pr-lg-4"> <Button className="btn" style={{ width: "100px" }} variant="contained" color="secondary" onClick={logout}>Logout</Button></Link>
                       ) : (
@@ -210,11 +208,24 @@ const Header = ({ logoutUser, setLogoutUser }) => {
         <div className={`overlay ${state}`} id="overlay">
           <nav className="overlay-menu">
             <div className="p-3 d-flex justify-content-left align-items-left" style={{ background: '#232f3e' }}><FaUserCircle size='1.5rem' className='text-white' /><span className="text-white pl-3 font-weight-bold" style={{ fontSize: '20px' }}>Hello, Sign in</span></div>
-            <ul className="menu m-0 p-0 w-100">
+            <ul className="menu m-0 w-100">
               <li className="pl-2 pt-2">
                 <h5 className="pl-4 pt-2">Digital Content & Devices</h5>
                 <ul className="submenu">
-                  <li><Link to="/music">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li onClick={toggleClass} className='music'><Link to="/">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
+                    <div className={style}>
+                      <h6 className="pl-5 pt-2 pb-3"><Link className="d-flex justify-content-left text-dark"><BsArrowLeft size='1.5em' className='text-secondary' /><span className="pl-3" style={{ fontSize: '18px' }}>Main Menu</span></Link></h6>
+                      <hr />
+                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                        <h5 className="pl-5 pt-2">Stream Music</h5>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                      </ul>
+                    </div>
+                  </li>
                   <li><Link to="/">Kindle E-readers & Books<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Appstore for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
@@ -228,7 +239,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                   <li><Link to="/">Computers<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Smart Home<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Art & Craft<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
-                  {isRed ?
+                  {showless &&
                     <>
                       <li><Link to="/">Automotive<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                       <li><Link to="/">Baby<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
@@ -243,10 +254,9 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                       <li><Link to="/">Luggage<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                       <li><Link to="/">Movies & Television<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                       <li><Link to="/">Pet Supplies<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
-                    </> :
-                    <></>
+                    </>
                   }
-                  <li type='button' onClick={() => setIsBlue(!isRed)}>{isRed ? <Red /> : <Blue />}</li>
+                  <li onClick={() => setShowAll(!showless)}>{showless ? <><span>Show less <MdOutlineKeyboardArrowUp size='1.8em' className="text-secondary" /></span></> : <><span>Show All<MdOutlineKeyboardArrowDown size='1.8em' className="text-secondary" /></span></>}</li>
                 </ul>
               </li>
               <hr />
