@@ -96,43 +96,7 @@ input:focus {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.cbp-tm-submenu {
-  position: absolute;
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-  padding: 0;
-  text-align: left;
-  pointer-events: none;
-  transition: visibility 0s, opacity 0s;
-}
-.cbp-tm-show .cbp-tm-submenu {
-  width: 16em;
-  left: 50%;
-  margin: 0 0 0 -8em;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: visibility 0s, opacity 0.3s;
-}
-.cbp-tm-show-above .cbp-tm-submenu {
-  bottom: 100%;
-  padding-bottom: 10px;
-}
-.cbp-tm-show-below .cbp-tm-submenu {
-  top: 100%;
-  padding-top: 10px;
-}
-.cbp-tm-nospace-right .cbp-tm-submenu {
-  right: 0;
-  left: auto;
-}
-.cbp-tm-nospace-left .cbp-tm-submenu {
-  left: 0;
-}
-.cbp-tm-menu > li:last-child .cbp-tm-submenu {
-  right: 0;
-}
+
 /* ---------------------------------------------------------------- */
 .button_container {
   cursor: pointer;
@@ -315,7 +279,7 @@ input:focus {
   z-index: 50;
   height: 100vw;
   transition: 0.3s linear;
-  background-color: lightblue;
+  background-color: white;
 }
 .clicked-category-inner {
   top: -3rem;
