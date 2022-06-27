@@ -217,7 +217,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                 <ul className="submenu">
                   <li onClick={toggleClass} className='music'><Link to="/">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
                     <div className={style ? "clicked-category-inner" : "category-inner"}>
-                      <h6 onClick={toggleClass} className="pl-5 pt-1 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em'/>Main Menu</span></span></h6>
+                      <h6 onClick={toggleClass} className="pl-5 pt-1 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em' />Main Menu</span></span></h6>
                       <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5 pt-2">Stream Music</h5>
                         <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music Unlimited</Link></li>
@@ -229,8 +229,8 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                     </div>
                   </li>
                   <li onClick={toggleClass2} className='music'><Link to="/">Kindle E-readers & Boks<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
-                   <div className={style2 ? "clicked-category-inner-2" : "category-inner-2"}>
-                      <h6 onClick={toggleClass2} className="pl-5 pt-2 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="pt-1" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em'/>Main Menu</span></span></h6>
+                    <div className={`${style2 ? "clicked-category-inner-2" : "category-inner-2"}`}>
+                      <h6 onClick={toggleClass2} className="pl-5 pt-0 pb-2 mb-0 border border-right-0" style={{ cursor: 'pointer' }}><span className="d-flex justify-content-left text-dark"><span className="pt-1" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em' />Main Menu</span></span></h6>
                       <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5 pt-2">Kindel E-Readers</h5>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Kids</Link></li>
@@ -240,7 +240,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Accessories</Link></li>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">See all Kindle E-Readers</Link></li>
                       </ul>
-                      <hr/>
+                      <hr />
                       <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5">Kindel Store</h5>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Books</Link></li>
@@ -248,15 +248,15 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Prime Reading</Link></li>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Vella</Link></li>
                       </ul>
-                      <hr/>
-                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                      <hr />
+                      <ul className="m-0 pb-4 pl-0 pr-0 pt-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5">Apps & Resources</h5>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Free Kindle Reading Apps</Link></li>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Cloud Reader</Link></li>
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Manage Your Content and Device</Link></li>
                       </ul>
                     </div>
-                  </li>
+                    </li>
                   <li onClick={toggleClass} className='music'><Link to="/">App store for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                 </ul>
@@ -314,6 +314,11 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </nav>
         </div>
       </nav>
+
+
+
+
+
 
 
     </>
