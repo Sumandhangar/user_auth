@@ -258,7 +258,8 @@ input:focus {
 .submenu li div h6:hover {
   background-color: #eaeded;
 }
-.category-inner,.category-inner-2 {
+.category-inner,
+.category-inner-2 {
   position: absolute;
   bottom: 0;
   left: -100%;
@@ -270,7 +271,8 @@ input:focus {
   transition: 0.3s linear;
   background-color: white;
 }
-.clicked-category-inner,.clicked-category-inner-2 {
+.clicked-category-inner,
+.clicked-category-inner-2 {
   position: fixed;
   bottom: 0;
   right: 0;

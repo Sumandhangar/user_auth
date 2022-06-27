@@ -256,7 +256,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                         <li className="pt-2 pb-2 pl-5"><Link to="/music">Manage Your Content and Device</Link></li>
                       </ul>
                     </div>
-                    </li>
+                  </li>
                   <li onClick={toggleClass} className='music'><Link to="/">App store for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                 </ul>
