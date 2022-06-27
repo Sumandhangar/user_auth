@@ -315,7 +315,7 @@ input:focus {
   z-index: 50;
   height: 100vw;
   transition: 0.3s linear;
-  background-color: white;
+  background-color: lightblue;
 }
 .clicked-category-inner {
   top: -3rem;
