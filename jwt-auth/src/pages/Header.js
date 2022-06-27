@@ -9,7 +9,7 @@ import Flag from '../images/india.jpg'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BiSearch } from 'react-icons/bi'
-import { BsGlobe, BsArrowLeft } from 'react-icons/bs'
+import { BsGlobe, BsArrowLeftShort } from 'react-icons/bs'
 import { GiUsaFlag } from 'react-icons/gi'
 import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown, MdKeyboardArrowRight } from 'react-icons/md'
 
@@ -25,13 +25,15 @@ const Header = ({ logoutUser, setLogoutUser }) => {
   const toggleAccordion = () => {
     setState(state === "" ? "open" : "");
   }
-  const [style, setStyle] = useState("category-inner");
+
+  const [style, setStyle] = useState(false);
   const toggleClass = () => {
-    setStyle("clicked-category-inner");
+    setStyle(!style);
   };
-
-
-   
+  const [style2, setStyle2] = useState(false);
+  const toggleClass2 = () => {
+    setStyle2(!style2);
+  };
   return (
     <>
 
@@ -39,7 +41,8 @@ const Header = ({ logoutUser, setLogoutUser }) => {
         <div className="row">
           <div className="col-12 d-flex align-items-center">
             <Link to='/' className="navbar-brand" style={{ width: '150px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <img src={logo} className='w-100' alt='logo' />
+              {/* <img src={logo} className='w-100' alt='logo' /> */}
+              <h5 className="text-light p-0 m-0">Nobaggy</h5>
             </Link>
             <Link to='/' className="text-white m-2">
               <div className="w-100 d-flex rounded p-1 hover-border" style={{ justifyCOntent: 'center', alignItems: 'center' }}> <HiOutlineLocationMarker color="white" size="1.5em" /><span className="pl-lg-1 m-0" style={{ lineHeight: '19px' }}>Deviver to <b>India</b></span></div>
@@ -213,21 +216,48 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                 <h5 className="pl-4 pt-2">Digital Content & Devices</h5>
                 <ul className="submenu">
                   <li onClick={toggleClass} className='music'><Link to="/">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
-                    <div className={style}>
-                      <h6 className="pl-5 pt-2 pb-3"><Link className="d-flex justify-content-left text-dark"><BsArrowLeft size='1.5em' className='text-secondary' /><span className="pl-3" style={{ fontSize: '18px' }}>Main Menu</span></Link></h6>
-                      <hr />
+                    <div className={style ? "clicked-category-inner" : "category-inner"}>
+                      <h6 onClick={toggleClass} className="pl-5 pt-1 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em'/>Main Menu</span></span></h6>
                       <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5 pt-2">Stream Music</h5>
-                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
-                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
-                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
-                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
-                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music Unlimited</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Free Streaming Music</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Podcasts</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Open Web Player</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Download the app</Link></li>
                       </ul>
                     </div>
                   </li>
-                  <li><Link to="/">Kindle E-readers & Books<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
-                  <li><Link to="/">Appstore for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li onClick={toggleClass2} className='music'><Link to="/">Kindle E-readers & Boks<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
+                   <div className={style2 ? "clicked-category-inner-2" : "category-inner-2"}>
+                      <h6 onClick={toggleClass2} className="pl-5 pt-2 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="pt-1" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em'/>Main Menu</span></span></h6>
+                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                        <h5 className="pl-5 pt-2">Kindel E-Readers</h5>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Kids</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Paperwhite</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Oasis</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Accessories</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">See all Kindle E-Readers</Link></li>
+                      </ul>
+                      <hr/>
+                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                        <h5 className="pl-5">Kindel Store</h5>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Books</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Unlimited</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Prime Reading</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Vella</Link></li>
+                      </ul>
+                      <hr/>
+                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                        <h5 className="pl-5">Apps & Resources</h5>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Free Kindle Reading Apps</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Kindle Cloud Reader</Link></li>
+                        <li className="pt-2 pb-2 pl-5"><Link to="/music">Manage Your Content and Device</Link></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li onClick={toggleClass} className='music'><Link to="/">App store for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                   <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
                 </ul>
               </li>

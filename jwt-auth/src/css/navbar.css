@@ -288,9 +288,14 @@ input:focus {
   border-color: transparent;
 }
 /* ************************************** */
-.category-inner{
+.submenu li div h6 {
+  cursor: pointer;
+}
+.submenu li div h6:hover {
+  background-color: #eaeded;
+}
+.category-inner,.category-inner-2 {
   position: absolute;
-  top: -2rem;
   bottom: 0;
   left: 100%;
   right: 0;
@@ -298,22 +303,23 @@ input:focus {
   z-index: 50;
   height: 100vw;
   overflow: hidden;
-  transition: .5s ease;
+  transition: 0.3s linear;
   background-color: white;
 }
- .clicked-category-inner{
+.clicked-category-inner,.clicked-category-inner-2 {
   position: absolute;
-  top: -2rem;
   bottom: 0;
   right: 0;
-  left:0;
-  width:100%;
+  left: 0;
+  width: 100%;
   z-index: 50;
   height: 100vw;
-  overflow: hidden;
-  transition: .5s ease;
+  transition: 0.3s linear;
   background-color: white;
 }
-.submenu li div h6:hover{
-  background-color: #eaeded;
+.clicked-category-inner {
+  top: -3rem;
+}
+.clicked-category-inner-2 {
+  top: -6rem;
 }
