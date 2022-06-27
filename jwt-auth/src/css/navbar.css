@@ -105,7 +105,11 @@ input:focus {
 .button-icon {
   width: 50px;
   background-color: transparent;
-  border: none;
+  padding-top: 7px;
+}
+
+.button-icon:hover{
+  border: 1px solid white;
 }
 .button-icon:active {
   color: white;
@@ -204,9 +208,6 @@ input:focus {
 .submenu li:hover a .arrow {
   color: black;
 }
-.button-icon {
-  border: none;
-}
 .button-icon .navbar-toggler-icon {
   width: 24px;
   height: 17px;
@@ -259,7 +260,8 @@ input:focus {
   background-color: #eaeded;
 }
 .category-inner,
-.category-inner-2 {
+.category-inner-2,
+.category-inner-3 {
   position: absolute;
   bottom: 0;
   left: -100%;
@@ -272,7 +274,8 @@ input:focus {
   background-color: white;
 }
 .clicked-category-inner,
-.clicked-category-inner-2 {
+.clicked-category-inner-2,
+.clicked-category-inner-3 {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -286,6 +289,7 @@ input:focus {
 .clicked-category-inner {
   top: 3.9rem;
 }
-.clicked-category-inner-2 {
+.clicked-category-inner-2,
+.clicked-category-inner-3 {
   top: 3.9rem;
 }

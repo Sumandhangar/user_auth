@@ -34,6 +34,10 @@ const Header = ({ logoutUser, setLogoutUser }) => {
   const toggleClass2 = () => {
     setStyle2(!style2);
   };
+  const [style3, setStyle3] = useState(false);
+  const toggleClass3 = () => {
+    setStyle3(!style3);
+  };
   return (
     <>
 
@@ -200,7 +204,6 @@ const Header = ({ logoutUser, setLogoutUser }) => {
         </div>
         <div className="mr-auto">
           <ul className="m-0 p-0 d-flex" style={{ listStyleType: 'none' }}>
-            <li><Link to='/' className="text-white pl-2 pr-2 nav-link">All</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Today's Deals</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Customer Service</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Registry</Link></li>
@@ -257,8 +260,20 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                       </ul>
                     </div>
                   </li>
-                  <li onClick={toggleClass} className='music'><Link to="/">App store for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
-                  <li><Link to="/">Contact<MdKeyboardArrowRight size='2em' className="arrow" /></Link></li>
+                  <li onClick={toggleClass3} className='music'><Link to="/">App store for Android<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
+                    <div className={style3 ? "clicked-category-inner-3" : "category-inner-3"}>
+                      <h6 onClick={toggleClass3} className="pl-5 pt-1 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em' />Main Menu</span></span></h6>
+                      <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
+                        <h5 className="pl-5 pt-2">Appstore For Android</h5>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">All Apps and Games</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Games</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Conins</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Download Nobaggy Appstore</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Apps</Link></li>
+                        <li className="pt-3 pb-3 pl-5"><Link to="/music">Your Apps & Subscriptions</Link></li>
+                      </ul>
+                    </div>
+                  </li>
                 </ul>
               </li>
               <hr />
