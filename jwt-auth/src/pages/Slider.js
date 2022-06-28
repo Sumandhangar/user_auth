@@ -12,9 +12,12 @@ import Img4 from '../images/compare.png'
 const Slider = () => {
     return (
         <>
-            <div className='container-fluid'>
+
+
+
+            <div className='container-fluid mt-5'>
                 <div className='row'>
-                    <div className='col-md-12'>
+                    <div className='col-md-12 bg-white'>
                         {/* <Swiper
                             slidesPerView={5}
                             spaceBetween={30}
@@ -27,7 +30,7 @@ const Slider = () => {
                             autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
-                              }}
+                            }}
                             scrollbar={{
                                 hide: true,
                                 draggable: true,
@@ -48,6 +51,9 @@ const Slider = () => {
                         </Swiper> */}
 
 
+
+
+
                         <div id="demo" className="carousel slide bg-white" data-ride="carousel">
                             <div className="carousel-inner p-3">
                                 <h3 className='m-0 p-0'>Frequently repurchased in Home</h3>
@@ -60,7 +66,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} alt="Los Angeles" width="80%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>
@@ -84,7 +90,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} alt="Los Angeles" width="80%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>
@@ -108,7 +114,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} alt="Los Angeles" width="80%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>

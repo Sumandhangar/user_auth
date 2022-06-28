@@ -22,7 +22,7 @@
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
-    "swiper": "^8.2.5",
+    "swiper": "^6.8.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -47,6 +47,14 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ],
+    "dependencies": {
+      "parcel-bundler": "^1.6.1",
+      "swiper": "latest"
+    },
+    "name": "Swiper - Scrollbar",
+    "tags": [
+      "swiper"
     ]
   }
 }
