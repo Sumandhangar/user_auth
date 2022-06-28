@@ -1,16 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
-import Img1 from '../images/bucket.jpg'
-import Img2 from '../images/light.jpg'
-import Img3 from '../images/img3.jpg'
-import Img4 from '../images/compare.jpg'
+import Img1 from '../images/bucket.png'
+import Img2 from '../images/light.png'
+import Img3 from '../images/chair.png'
+import Img4 from '../images/compare.png'
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
+
+
 const Slider = () => {
     return (
         <>
-            <div className='container-fluid mt-5'>
+            <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-md-12'>
+                        {/* <Swiper
+                            slidesPerView={5}
+                            spaceBetween={30}
+                            slidesPerGroup={1}
+                            loop={true}
+                            loopFillGroupWithBlank={true}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                              }}
+                            scrollbar={{
+                                hide: true,
+                                draggable: true,
+                            }}
+                            navigation={true}
+                            modules={[Autoplay, Pagination, Navigation, Scrollbar]}
+                            className="mySwiper mt-5"
+                        >
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                        </Swiper> */}
+
+
                         <div id="demo" className="carousel slide bg-white" data-ride="carousel">
                             <div className="carousel-inner p-3">
                                 <h3 className='m-0 p-0'>Frequently repurchased in Home</h3>
@@ -97,6 +134,7 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
+
             <br /><br /><br /><br /><br /><br /><br />
         </>
     )

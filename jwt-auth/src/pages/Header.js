@@ -197,14 +197,15 @@ const Header = ({ logoutUser, setLogoutUser }) => {
       {/* -------------------------------------------------------- */}
       <div className="" id="collapsibleNavbar"></div>
       <nav className="navbar m-0 p-0" style={{ background: '#232f3e' }}>
-        <div className="button_container pt-2 pb-2 pl-2 text-center" id="toggle">
+        <div className="button_container pt-1 pb-1 pl-2 text-center" id="toggle">
           <button className="navbar-toggler button-icon" type="button" onClick={toggleAccordion} data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="false">
             <span className="navbar-toggler-icon mb-1" style={{ backgroundImage: 'none' }}></span>
           </button>
         </div>
         <div className="mr-auto">
-          <ul className="m-0 p-0 d-flex" style={{ listStyleType: 'none' }}>
+          <ul className="mt-0 mb-0 mr-0 ml-3 p-0 d-flex" style={{ listStyleType: 'none' }}>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Today's Deals</Link></li>
+            <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Buy Again</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Customer Service</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Registry</Link></li>
             <li><Link to='/' className="text-white pl-2 pr-2 nav-link">Gift Cards</Link></li>

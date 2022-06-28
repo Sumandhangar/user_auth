@@ -3,6 +3,10 @@ import "./App.css";
 import './css/navbar.css'
 import './css/products.css'
 import './css/footer.css'
+import './css/slider.css'
+import 'swiper/swiper-bundle.css';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Header from "./pages/Header";
