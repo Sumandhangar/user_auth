@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import Img1 from '../images/bucket.png'
 import Img2 from '../images/light.png'
-import Img3 from '../images/chair.png'
+import Img3 from '../images/board.png'
 import Img4 from '../images/compare.png'
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
@@ -49,8 +49,6 @@ const Slider = () => {
                             <SwiperSlide style={{ height: '350px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
                             <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
                         </Swiper> */}
-
-
 
 
 
@@ -137,6 +135,8 @@ const Slider = () => {
                                 <GrFormNext color="black" fontSize="3em" />
                             </Link>
                         </div>
+
+
                     </div>
                 </div>
             </div>
