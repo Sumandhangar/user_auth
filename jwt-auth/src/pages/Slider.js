@@ -64,7 +64,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>
@@ -88,7 +88,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>
@@ -112,7 +112,7 @@ const Slider = () => {
                                         </div>
                                         <div className='col-md-3'>
                                             <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="100%" />
+                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
                                             </div>
                                         </div>
                                         <div className='col-md-3'>
