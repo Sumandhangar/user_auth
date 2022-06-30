@@ -54,19 +54,19 @@ const Slider = () => {
                         </Swiper> */}
 
 
-                        <div className='bg-white mb-4 media-scroller snaps-inline' style={{display:'grid', gridAutoFlow:'column', gridAutoColumns:'25%', overflowX:'auto', overscrollBehaviorInline:'contain'}}>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                          <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width:'300px'}}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                        <div className='bg-white mb-4 media-scroller snaps-inline' style={{ display: 'grid', gridAutoFlow: 'column', gridAutoColumns: '25%', overflowX: 'auto', overscrollBehaviorInline: 'contain' }}>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
+                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
                         </div>
 
 
@@ -159,7 +159,13 @@ const Slider = () => {
                 </div>
             </div>
 
-   
+
+
+
+
+         
+
+
 
             <br /><br /><br /><br /><br /><br /><br />
         </>
