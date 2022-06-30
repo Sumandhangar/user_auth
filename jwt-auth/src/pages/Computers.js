@@ -5,9 +5,7 @@ const Computers = () => {
   return (
     <div className="custome">
       <OnHoverScrollContainer>
-        <div className='container-fluid'>
-          <div className='row'>
-            <div className='col-12'>
+             <div className="p-5 " style={{width:'1400px'}}>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                 tortor neque, vehicula sit amet odio quis, dictum tristique lorem.
@@ -30,8 +28,6 @@ const Computers = () => {
                 id ligula maximus iaculis. Nunc malesuada placerat purus eget
                 consequat.
               </p>
-            </div>
-          </div>
         </div>
       </OnHoverScrollContainer>
     </div>

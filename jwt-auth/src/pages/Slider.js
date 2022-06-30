@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, {useState } from 'react';
 import { Link } from 'react-router-dom';
 import Img1 from '../images/bucket.png'
 import Img2 from '../images/light.png'
@@ -7,9 +7,15 @@ import Img4 from '../images/compare.png'
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
 
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-
+import { Navigation, Pagination, Scrollbar,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+
+
+
+
+
 
 const Slider = () => {
     return (
@@ -254,7 +260,7 @@ const Slider = () => {
 
 
 
-
+            
 
 
 

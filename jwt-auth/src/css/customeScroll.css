@@ -1,19 +1,19 @@
 
 
-.body::-webkit-scrollbar {
+.custom::-webkit-scrollbar {
     display: none;
   }
   
-  /* .body {
+  .custom {
     overflow: auto;
-    height: calc(100vh - 20px);
+    width: calc(100vh - 20px);
     scrollbarwidth: none;
     msoverflowstyle: none;
-  } */
+  }
   
 
   .scrollhost-container {
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
   }
   .scrollhost {
