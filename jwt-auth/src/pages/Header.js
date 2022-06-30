@@ -330,13 +330,6 @@ const Header = ({ logoutUser, setLogoutUser }) => {
           </nav>
         </div>
       </nav>
-
-
-
-
-
-
-
     </>
   );
 };

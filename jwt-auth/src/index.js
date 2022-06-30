@@ -8,11 +8,11 @@ import { PersistGate } from 'redux-persist/integration/react';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
- <Provider store={store}>
-  <PersistGate persistor={persistor}>
-  <App />
-  </PersistGate>
- </Provider>,
+  <Provider store={store}>
+    <PersistGate persistor={persistor}>
+        <App />
+    </PersistGate>
+  </Provider>,
   document.getElementById('root')
 );
-reportWebVitals();
+

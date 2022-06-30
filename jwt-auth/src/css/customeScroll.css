@@ -4,12 +4,12 @@
     display: none;
   }
   
-  .body {
+  /* .body {
     overflow: auto;
     height: calc(100vh - 20px);
     scrollbarwidth: none;
     msoverflowstyle: none;
-  }
+  } */
   
 
   .scrollhost-container {
