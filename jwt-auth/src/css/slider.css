@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
 .swiper {
   width: 100%;
   height: 100%;
@@ -32,3 +34,12 @@
 .swiper-slide .chair{
 width: 150%;
 }
+
+/* *********************************************** */
+.snaps-inline{
+  scroll-snap-type: inline mandatory;
+}
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
