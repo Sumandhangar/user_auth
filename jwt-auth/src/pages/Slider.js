@@ -1,27 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import Img1 from '../images/bucket.png'
 import Img2 from '../images/light.png'
 import Img3 from '../images/board.png'
 import Img4 from '../images/compare.png'
-import * as Scroll from 'react-scroll';
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
 
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Slider = () => {
     return (
         <>
-
-
-
-
-
             <div className='container-fluid mt-5'>
                 <div className='row'>
                     <div className='col-md-12'>
-                        {/* <Swiper
+                        <Swiper
                             slidesPerView={5}
                             spaceBetween={30}
                             slidesPerGroup={1}
@@ -40,18 +37,18 @@ const Slider = () => {
                             }}
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation, Scrollbar]}
-                            className="mySwiper mt-5"
+                            className="mySwiper mt-5 mb-5 bg-light p-3"
                         >
-                            <SwiperSlide style={{</div> }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
-                            <SwiperSlide style={{ height: '350px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
-                        </Swiper> */}
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img1} alt="Los Angeles" /></SwiperSlide>
+                            <SwiperSlide style={{ height: '250px' }}> <img src={Img4} alt="Los Angeles" /></SwiperSlide>
+                        </Swiper>
 
 
                         <div className='bg-white mb-4 media-scroller snaps-inline' style={{ display: 'grid', gridAutoFlow: 'column', gridAutoColumns: '25%', overflowX: 'auto', overscrollBehaviorInline: 'contain' }}>
@@ -162,8 +159,83 @@ const Slider = () => {
 
 
 
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, , Autoplay]}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation={true}
+                loop={true}
+                pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
+                // autoplay={{
+                //     delay: 2500,
+                //     disableOnInteraction: true,
+                // }}
+                onSlideChange={() => console.log('slide change')}
+                style={{overflowX:'scroll'}}
+            >
+                <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img2} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img3} className='chair' alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img4} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img1} alt="Los Angeles" width="60%" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img2} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img3} className='chair' alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img4} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img1} alt="Los Angeles" width="60%" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img2} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img3} className='chair' alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img4} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img1} alt="Los Angeles" width="60%" />
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img2} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img3} className='chair' alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img4} alt="Los Angeles" width="60%" />
+                    </div>
+                    <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
+                        <img src={Img1} alt="Los Angeles" width="60%" />
+                    </div>
+                </SwiperSlide>
+            </Swiper>
 
-         
+
+
+
+
 
 
 

@@ -5,6 +5,13 @@ import './css/products.css'
 import './css/footer.css'
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
+// import 'react-slider-swiper/src/css/swiper.css'
+// import 'swiper/css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/scrollbar/scrollbar.min.css';
+
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Header from "./pages/Header";
