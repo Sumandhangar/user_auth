@@ -155,14 +155,11 @@ const Slider = () => {
                                 <GrFormNext color="black" fontSize="3em" />
                             </Link>
                         </div>
-
-
                     </div>
                 </div>
             </div>
 
-
-           
+   
 
             <br /><br /><br /><br /><br /><br /><br />
         </>
