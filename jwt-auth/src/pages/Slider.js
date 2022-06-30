@@ -38,6 +38,7 @@ const Slider = () => {
                             navigation={true}
                             modules={[Autoplay, Pagination, Navigation, Scrollbar]}
                             className="mySwiper mt-5 mb-5 bg-light p-3"
+                            style={{ overflowX: 'scroll' }}
                         >
                             <SwiperSlide style={{ height: '250px' }}> <img src={Img2} alt="Los Angeles" /></SwiperSlide>
                             <SwiperSlide style={{ height: '250px' }}> <img src={Img3} alt="Los Angeles" /></SwiperSlide>
@@ -51,106 +52,111 @@ const Slider = () => {
                         </Swiper>
 
 
-                        <div className='bg-white mb-4 media-scroller snaps-inline' style={{ display: 'grid', gridAutoFlow: 'column', gridAutoColumns: '25%', overflowX: 'auto', overscrollBehaviorInline: 'contain' }}>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                            <div className='media-element'><div className='p-3 pb-0' style={{ height: '350px', width: '300px' }}><img src={Img2} alt="Los Angeles" width='100%' /></div></div>
-                        </div>
 
 
 
 
-                        <div id="demo" className="carousel slide bg-white" data-ride="carousel">
-                            <div className="carousel-inner p-3">
-                                <h3 className='m-0 p-0'>Frequently repurchased in Home</h3>
+                        
+
+
+
+
+
+                        <div id="demo" className="carousel slide bg-light" data-ride="carousel">
+                            <ul className="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" className="active bg-dark"></li>
+                                <li data-target="#demo" data-slide-to="1" className='bg-dark'></li>
+                                <li data-target="#demo" data-slide-to="2" className='bg-dark'></li>
+                            </ul>
+                            <div className="carousel-inner pl-2 pr-2 pt-4 pb-5">
+                            <h3 className='m-0 pb-4 pl-5'>Frequently repurchased in Home Carousel</h3>
                                 <div className="carousel-item active">
-                                    <div className='row'>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img2} alt="Los Angeles" width="80%" />
-                                            </div>
+                                    <div className='d-flex'>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img1} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img2} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img4} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img3} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img1} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img4} alt="Los Angeles" width="75%" />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <div className='row'>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img2} alt="Los Angeles" width="80%" />
-                                            </div>
+                                    <div className='d-flex'>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img1} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img2} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img4} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img3} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img1} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img4} alt="Los Angeles" width="75%" />
                                         </div>
                                     </div>
                                 </div>
-                                <div className='carousel-item'>
-                                    <div className='row'>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img2} alt="Los Angeles" width="80%" />
-                                            </div>
+                                <div className="carousel-item">
+                                    <div className='d-flex'>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img1} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img3} className='chair' alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img2} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img4} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img3} alt="Los Angeles" width="75%" />
                                         </div>
-                                        <div className='col-md-3'>
-                                            <div className='p-3' style={{ height: '280px', width: '100%' }}>
-                                                <img src={Img1} alt="Los Angeles" width="80%" />
-                                            </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img4} alt="Los Angeles" width="75%" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="carousel-item ">
+                                    <div className='d-flex'>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img1} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img2} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img3} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img4} alt="Los Angeles" width="75%" />
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div className="carousel-item">
+                                    <div className='d-flex'>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img1} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img2} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img3} alt="Los Angeles" width="75%" />
+                                        </div>
+                                        <div className='d-flex justify-content-center align-items-center p-2' style={{ height: '280px', width: '25%' }}>
+                                            <img src={Img4} alt="Los Angeles" width="75%" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <Link to='/' className="carousel-control-prev w-auto" href="#demo" data-slide="prev">
-                                <GrFormPrevious color="black" fontSize="3em" />
-                            </Link>
-                            <Link to='/' className="carousel-control-next w-auto" href="#demo" data-slide="next">
-                                <GrFormNext color="black" fontSize="3em" />
-                            </Link>
+                            <a className="carousel-control-prev bg-dark" href="#demo" data-slide="prev" style={{height:'100px', width:'40px', borderRadius:'0 5px 5px 0', marginTop:'10%'}}>
+                                <span className="carousel-control-prev-icon text-black"></span>
+                            </a>
+                            <a className="carousel-control-next bg-dark" href="#demo" data-slide="next" style={{height:'100px', width:'40px', borderRadius:'5px 0 0 5px', marginTop:'10%'}}>
+                                <span className="carousel-control-next-icon text-black"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -159,20 +165,20 @@ const Slider = () => {
 
 
 
-            <Swiper
+            {/* <Swiper
                 modules={[Navigation, Pagination, Scrollbar, , Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation={true}
                 loop={true}
-                pagination={{ clickable: true }}
+                // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
-                // autoplay={{
-                //     delay: 2500,
-                //     disableOnInteraction: true,
-                // }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: true,
+                }}
                 onSlideChange={() => console.log('slide change')}
-                style={{overflowX:'scroll'}}
+                className='bg-light mt-5 scrollhost'
             >
                 <SwiperSlide className='d-flex justify-content-center align-items-center w-100'>
                     <div className='p-1 d-flex justify-content-center align-items-center' style={{ height: '280px', width: '25%' }}>
@@ -230,8 +236,7 @@ const Slider = () => {
                         <img src={Img1} alt="Los Angeles" width="60%" />
                     </div>
                 </SwiperSlide>
-            </Swiper>
-
+            </Swiper> */}
 
 
 

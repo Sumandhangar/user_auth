@@ -45,7 +45,6 @@ const Header = ({ logoutUser, setLogoutUser }) => {
         <div className="row">
           <div className="col-12 d-flex align-items-center">
             <Link to='/' className="navbar-brand" style={{ width: '150px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              {/* <img src={logo} className='w-100' alt='logo' /> */}
               <h5 className="text-light p-0 m-0">Nobaggy</h5>
             </Link>
             <Link to='/' className="text-white m-2">

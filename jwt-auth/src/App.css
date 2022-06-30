@@ -1,6 +1,15 @@
-.App {
-  text-align: center;
+
+
+body {
+  height: 100vh;
 }
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: calc(100vh - 20px);
+  color: #0808;
+}
+
 
 .App-logo {
   height: 40vmin;
