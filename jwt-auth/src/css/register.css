@@ -1,0 +1,96 @@
+.valid{
+    color: green;
+}
+.hide{
+    display: none;
+}
+.invalid{
+    color: red;
+}
+.false{
+    color: red;
+}
+.true{
+  color: green;
+}
+.instructions{
+  color: red;
+}
+.offscreen{
+    color: black;
+    display: none;
+}
+.errmsg{
+    color: red;
+}
+/* ---------------------------------------------------- */
+input{
+    border: 0;
+}
+:focus-visible{
+    outline: none;
+}
+.form-control:focus{
+    box-shadow: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.banner{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.form-group label{
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 150px;
+  padding-right: 3rem;
+}
+.form-group .form-control{
+    border: none;
+    padding: auto;
+    border-radius: 0;
+    background-color: transparent;  
+}
+.form-group:hover .form-control{
+    background-color: rgba(209, 215, 250, 0.466);
+}
+/* ------------------------------------ */
+.facebook,.google,.twitter{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+}
+.facebook{
+    border: 5px solid 	#4267B2;
+}
+.google{
+ border: 5px solid #4285F4;
+}
+.twitter{
+ border: 5px solid	#1DA1F2;
+}
+.social-icon{
+    transform: rotate(-45deg);
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

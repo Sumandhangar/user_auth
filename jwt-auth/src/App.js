@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import './css/navbar.css'
 import './css/products.css'
+import './css/register.css'
 import './css/footer.css'
 import './css/customeScroll.css'
 

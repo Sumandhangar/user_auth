@@ -8,7 +8,6 @@ import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import Banner1 from '../images/banner-4.png'
 import Banner2 from '../images/banner-2.jpg'
 import Banner3 from '../images/banner-5.jpg'
-import Computer from './Computers'
 
 const Layout = () => {
   return (
