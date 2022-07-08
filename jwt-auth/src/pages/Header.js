@@ -221,7 +221,7 @@ const Header = ({ logoutUser, setLogoutUser }) => {
                 <ul className="submenu">
                   <li onClick={toggleClass} className='music'><Link to="/">Nobaggy Music<MdKeyboardArrowRight size='2em' className="arrow" /></Link>
                     <div className={style ? "clicked-category-inner" : "category-inner"}>
-                      <h6 onClick={toggleClass} className="pl-5 pt-1 pb-2 mb-0 border border-right-0" style={{}}><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em' />Main Menu</span></span></h6>
+                      <h6 onClick={toggleClass} className="pl-5 pt-1 pb-2 mb-0 border border-right-0"><span className="d-flex justify-content-left text-dark"><span className="" style={{ fontSize: '18px' }}><BsArrowLeftShort size='2em' />Main Menu</span></span></h6>
                       <ul className="m-0 p-0" style={{ listStyleType: 'none' }}>
                         <h5 className="pl-5 pt-2">Stream Music</h5>
                         <li className="pt-3 pb-3 pl-5"><Link to="/music">Nobaggy Music Unlimited</Link></li>
