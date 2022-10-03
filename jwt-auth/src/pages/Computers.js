@@ -6,7 +6,7 @@ const Computers = () => {
     <div className="custome">
       <OnHoverScrollContainer>
              <div className="p-5 " style={{width:'1400px'}}>
-              <p>jijgjgij</p>
+             
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                 tortor neque, vehicula sit amet odio quis, dictum tristique lorem.
