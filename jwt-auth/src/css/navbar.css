@@ -116,6 +116,7 @@ input:focus {
   width: 50px;
   background-color: transparent;
   padding-top: 7px;
+  border: 1px solid transparent;
 }
 
 .button-icon:hover{
